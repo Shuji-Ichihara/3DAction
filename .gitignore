@@ -61,4 +61,6 @@ crashlytics-build.properties
 TuesdayLastWork/.vsconfig
 TuesdayLastWork/Library/*
 TuesdayLastWork/Logs/*
+TuesdayLastWork/Temp/*
+TuesdayLastWork/Obj/*
 TuesdayLastWork/UserSettings/*
