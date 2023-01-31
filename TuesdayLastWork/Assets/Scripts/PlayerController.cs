@@ -31,18 +31,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (true == GameManager.Instance.IsClear) { return; }
+        if (true == GameManager.Instance.IsOver) { return; }
         //MovePlayer();
     }
 
     private void FixedUpdate()
     {
-        PlyaerEnd();
+        if (true == GameManager.Instance.IsClear) { return; }
+        if (true == GameManager.Instance.IsOver) { return; }
         MovePlayer();
     }
 
     private void LateUpdate()
     {
-        PlyaerEnd();
+        if (true == GameManager.Instance.IsClear) { return; }
+        if (true == GameManager.Instance.IsOver) { return; }
         Camera.main.transform.position = _player.transform.position + _offset;
     }
 
@@ -86,9 +90,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void PlyaerEnd()
-    {
-        if (true == GameManager.Instance.IsClear) { return; }
-        if (true == GameManager.Instance.IsOver) { return; }
-    }
 }
