@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -38,13 +36,13 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        GameEnd();
+        PlyaerEnd();
         MovePlayer();
     }
 
     private void LateUpdate()
     {
-        GameEnd();
+        PlyaerEnd();
         Camera.main.transform.position = _player.transform.position + _offset;
     }
 
@@ -88,7 +86,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void GameEnd()
+    private void PlyaerEnd()
     {
         if (true == GameManager.Instance.IsClear) { return; }
         if (true == GameManager.Instance.IsOver) { return; }
