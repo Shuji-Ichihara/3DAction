@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
+    [SerializeField]
     private GameObject _startZone = null;
+    [SerializeField]
     private GameObject _goalZone = null;
+    [SerializeField]
     private GameObject _gameOver = null;
 
     public GameObject StartZone => _startZone;
@@ -21,9 +24,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         if (true == IsOver) { IsOver = false; }
         else if (true == IsClear) { IsClear = false; }
-        _startZone = GameObject.Find("StartZone").GetComponent<GameObject>();
-        _goalZone = GameObject.Find("GoalZone").GetComponent<GameObject>();
-        _gameOver = GameObject.Find("GameOver").GetComponent<GameObject>();
     }
 
     // Update is called once per frame
