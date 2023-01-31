@@ -1,6 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
@@ -28,14 +29,32 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     // Update is called once per frame
     void Update()
     {
-
+        ChangeScreen();
+        GameEnd();
     }
 
     private void ChangeScreen()
     {
-        if(true ==IsOver)
+        if (true == IsOver)
         {
-            // �ǋL
+            // 後に追記
         }
+        else if (true == IsClear)
+        {
+            SceneManager.LoadSceneAsync("ClearScene");
+        }
+    }
+
+    private void GameEnd()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;    //ゲームプレイ終了
+#else
+            Application.Quit(); //ゲームプレイ終了
+#endif
+        }
+
     }
 }
