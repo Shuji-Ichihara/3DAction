@@ -55,6 +55,5 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             Application.Quit(); //ゲームプレイ終了
 #endif
         }
-
     }
 }
