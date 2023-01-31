@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimeManager : SingletonMonoBehaviour<TimeManager>
 {
     public static float CountUpTIme { get; private set; } = 0.0f;
 
+    private Text _timeText = null;
+
     // Start is called before the first frame update
     void Start()
     {
+        _timeText = GameObject.Find("Timer").GetComponent<Text>();
         CountUpTIme = 0.0f;
     }
 
@@ -16,5 +20,6 @@ public class TimeManager : SingletonMonoBehaviour<TimeManager>
     void Update()
     {
         CountUpTIme += Time.deltaTime;
+        //_timeText.text = CountUpTIme.ToString(string.Format("{0:##.##}", CountUpTIme));
     }
 }
