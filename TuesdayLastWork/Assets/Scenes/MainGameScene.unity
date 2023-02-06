@@ -713,7 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _obstacle: {fileID: 3239842784343181064, guid: 287da7480145cc24c828a19877ad2aeb, type: 3}
-  _max: 1000
+  _max: 800
 --- !u!1 &1216687133
 GameObject:
   m_ObjectHideFlags: 0
