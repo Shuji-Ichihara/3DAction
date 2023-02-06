@@ -50,6 +50,9 @@ public class PlayerController : MonoBehaviour
         Camera.main.transform.position = _player.transform.position + _offset;
     }
 
+    /// <summary>
+    /// プレイヤーの移動処理
+    /// </summary>
     private void MovePlayer()
     {
         if (Input.GetKey(KeyCode.W))
