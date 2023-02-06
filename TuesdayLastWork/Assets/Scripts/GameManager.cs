@@ -38,10 +38,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         if (true == IsOver)
         {
             // 後に追記
+            SceneManager.LoadSceneAsync("TitleScene");
         }
         else if (true == IsClear)
         {
-            SceneManager.LoadSceneAsync("ClearScene");
+            SceneManager.LoadSceneAsync("TitleScene");
         }
     }
 
