@@ -647,6 +647,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1043927966}
   - component: {fileID: 1043927967}
+  - component: {fileID: 1043927969}
+  - component: {fileID: 1043927968}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -684,6 +686,34 @@ MonoBehaviour:
   _startZone: {fileID: 1216687133}
   _goalZone: {fileID: 1025298869}
   _gameOver: {fileID: 1240492972}
+--- !u!114 &1043927968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043927965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229a15f4e252a0442acf675e214bfae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 1617228740}
+  _stage: {fileID: 1679195011}
+--- !u!114 &1043927969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043927965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8eb4c48d08e3a40b04bf13145ab292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _obstacle: {fileID: 3239842784343181064, guid: 287da7480145cc24c828a19877ad2aeb, type: 3}
+  _max: 1000
 --- !u!1 &1216687133
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +928,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 1
 --- !u!65 &1617228747
 BoxCollider:
